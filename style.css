@@ -7,17 +7,80 @@
 body {
     font-family: 'Poppins', sans-serif;
     height: 100vh;
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0;
     overflow: hidden;
+    background-image: url(./img/milyoner.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+/* açılış*****/
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    animation: animLeft 4s linear forwards;
+    z-index: 2;
+}
+.left img {
+    width: 100%;
+    height: 100%;
+}
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    animation: animRight 4s linear forwards;
+    z-index: 2;
+}
+.right img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes animLeft {
+    0% {
+        transform: translateX(0);
+       
+      }
+      100% {
+        transform: translateX(-1000px);
+      
+       
+      }
+    
+}
+@keyframes animRight {
+    0% {
+        transform: translateX(0);
+       
+      }
+      100% {
+        transform: translateX(1000px);
+      
+       
+      }
+    
+}
+
+
+
+/********/
+
 h1 {
     color: white;
+    background-color: rgb(197, 80, 197);
+    padding: 10px 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px ;
 }
 .quiz-container {
     background-color: white;
@@ -59,7 +122,7 @@ ul li label {
     color: white;
 }
 #submit:hover::after {
-content: ' ,Son Kararım, 👍';
+content: ' ,final decision, 👍';
 }
 #submit:hover {
     outline: none;
